@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 
 # Load trained models
-parkinson_model = joblib.load("parkinsons_model.sav")
+parkinsons_model = joblib.load("parkinsons_model.sav")
 diabetes_model = joblib.load("diabetes_model.sav")
-heart_model = joblib.load("heartdisease_model.sav")
+heartdisease_model = joblib.load("heartdisease_model.sav")
 
 st.title("🩺 Multiple Disease Prediction App")
 st.write("Predict Parkinson’s, Diabetes, or Heart Disease using ML models.")
