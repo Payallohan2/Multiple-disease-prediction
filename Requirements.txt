@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+
+
+# streamlit → for building the web app
+
+# pandas & numpy → for handling input data
+
+# scikit-learn → since your models are trained with it
+
+# joblib → for loading the saved .pkl models
