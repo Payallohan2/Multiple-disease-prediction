@@ -19,52 +19,52 @@ disease_choice = st.sidebar.selectbox(
 # Parkinson’s dataset features
 if disease_choice == "Parkinson’s":
     st.header("Parkinson’s Prediction")
-   mdvp_fo = st.number_input("MDVP:Fo(Hz)", 0.0, 300.0, 120.0)
-mdvp_fhi = st.number_input("MDVP:Fhi(Hz)", 0.0, 600.0, 250.0)
-mdvp_flo = st.number_input("MDVP:Flo(Hz)", 0.0, 300.0, 100.0)
-mdvp_jitter_perc = st.number_input("MDVP:Jitter(%)", 0.0, 1.0, 0.01)
-mdvp_jitter_abs = st.number_input("MDVP:Jitter(Abs)", 0.0, 0.1, 0.005)
-mdvp_rap = st.number_input("MDVP:RAP", 0.0, 1.0, 0.01)
-mdvp_ppq = st.number_input("MDVP:PPQ", 0.0, 1.0, 0.01)
-jitter_ddp = st.number_input("Jitter:DDP", 0.0, 1.0, 0.01)
-mdvp_shimmer = st.number_input("MDVP:Shimmer", 0.0, 1.0, 0.1)
-mdvp_shimmer_db = st.number_input("MDVP:Shimmer(dB)", 0.0, 5.0, 0.5)
-shimmer_apq3 = st.number_input("Shimmer:APQ3", 0.0, 1.0, 0.1)
-shimmer_apq5 = st.number_input("Shimmer:APQ5", 0.0, 1.0, 0.1)
-mdvp_apq = st.number_input("MDVP:APQ", 0.0, 1.0, 0.1)
-shimmer_dda = st.number_input("Shimmer:DDA", 0.0, 1.0, 0.1)
-nhr = st.number_input("NHR", 0.0, 1.0, 0.1)
-hnr = st.number_input("HNR", 0.0, 50.0, 20.0)
-rpde = st.number_input("RPDE", 0.0, 1.0, 0.5)
-dfa = st.number_input("DFA", 0.0, 1.0, 0.5)
-spread1 = st.number_input("spread1", -10.0, 10.0, 0.0)
-spread2 = st.number_input("spread2", -10.0, 10.0, 0.0)
-d2 = st.number_input("D2", 0.0, 5.0, 1.0)
-ppe = st.number_input("PPE", 0.0, 1.0, 0.5)
+    mdvp_fo = st.number_input("MDVP:Fo(Hz)", 0.0, 300.0, 120.0)
+    mdvp_fhi = st.number_input("MDVP:Fhi(Hz)", 0.0, 600.0, 250.0)
+    mdvp_flo = st.number_input("MDVP:Flo(Hz)", 0.0, 300.0, 100.0)
+    mdvp_jitter_perc = st.number_input("MDVP:Jitter(%)", 0.0, 1.0, 0.01)
+    mdvp_jitter_abs = st.number_input("MDVP:Jitter(Abs)", 0.0, 0.1, 0.005)
+    mdvp_rap = st.number_input("MDVP:RAP", 0.0, 1.0, 0.01)
+    mdvp_ppq = st.number_input("MDVP:PPQ", 0.0, 1.0, 0.01)
+    jitter_ddp = st.number_input("Jitter:DDP", 0.0, 1.0, 0.01)
+    mdvp_shimmer = st.number_input("MDVP:Shimmer", 0.0, 1.0, 0.1)
+    mdvp_shimmer_db = st.number_input("MDVP:Shimmer(dB)", 0.0, 5.0, 0.5)
+    shimmer_apq3 = st.number_input("Shimmer:APQ3", 0.0, 1.0, 0.1)
+    shimmer_apq5 = st.number_input("Shimmer:APQ5", 0.0, 1.0, 0.1)
+    mdvp_apq = st.number_input("MDVP:APQ", 0.0, 1.0, 0.1)
+    shimmer_dda = st.number_input("Shimmer:DDA", 0.0, 1.0, 0.1)
+    nhr = st.number_input("NHR", 0.0, 1.0, 0.1)
+    hnr = st.number_input("HNR", 0.0, 50.0, 20.0)
+    rpde = st.number_input("RPDE", 0.0, 1.0, 0.5)
+    dfa = st.number_input("DFA", 0.0, 1.0, 0.5)
+    spread1 = st.number_input("spread1", -10.0, 10.0, 0.0)
+    spread2 = st.number_input("spread2", -10.0, 10.0, 0.0)
+    d2 = st.number_input("D2", 0.0, 5.0, 1.0)
+    ppe = st.number_input("PPE", 0.0, 1.0, 0.5)
 
     input_data = pd.DataFrame({
          "MDVP:Fo(Hz)": [mdvp_fo],
-    "MDVP:Fhi(Hz)": [mdvp_fhi],
-    "MDVP:Flo(Hz)": [mdvp_flo],
-    "MDVP:Jitter(%)": [mdvp_jitter_perc],
-    "MDVP:Jitter(Abs)": [mdvp_jitter_abs],
-    "MDVP:RAP": [mdvp_rap],
-    "MDVP:PPQ": [mdvp_ppq],
-    "Jitter:DDP": [jitter_ddp],
-    "MDVP:Shimmer": [mdvp_shimmer],
-    "MDVP:Shimmer(dB)": [mdvp_shimmer_db],
-    "Shimmer:APQ3": [shimmer_apq3],
-    "Shimmer:APQ5": [shimmer_apq5],
-    "MDVP:APQ": [mdvp_apq],
-    "Shimmer:DDA": [shimmer_dda],
-    "NHR": [nhr],
-    "HNR": [hnr],
-    "RPDE": [rpde],
-    "DFA": [dfa],
-    "spread1": [spread1],
-    "spread2": [spread2],
-    "D2": [d2],
-    "PPE": [ppe]
+         "MDVP:Fhi(Hz)": [mdvp_fhi],
+         "MDVP:Flo(Hz)": [mdvp_flo],
+         "MDVP:Jitter(%)": [mdvp_jitter_perc],
+         "MDVP:Jitter(Abs)": [mdvp_jitter_abs],
+         "MDVP:RAP": [mdvp_rap],
+         "MDVP:PPQ": [mdvp_ppq],
+         "Jitter:DDP": [jitter_ddp],
+         "MDVP:Shimmer": [mdvp_shimmer],
+         "MDVP:Shimmer(dB)": [mdvp_shimmer_db],
+         "Shimmer:APQ3": [shimmer_apq3],
+         "Shimmer:APQ5": [shimmer_apq5],
+         "MDVP:APQ": [mdvp_apq],
+         "Shimmer:DDA": [shimmer_dda],
+         "NHR": [nhr],
+         "HNR": [hnr],
+         "RPDE": [rpde],
+         "DFA": [dfa],
+         "spread1": [spread1],
+         "spread2": [spread2],
+         "D2": [d2],
+         "PPE": [ppe]
     })
 
     if st.button("Predict Parkinson’s"):
