@@ -3,7 +3,7 @@
 A Streamlit web application that predicts **Parkinson’s Disease, Diabetes, and Heart Disease** using machine learning models trained on Kaggle datasets.  
 This project combines three individual disease prediction models into one unified app, making it easier to test multiple health conditions in a single interface.
 
-Live Demo ---- 
+Live Demo ---- https://multiple-disease-prediction-phegkcpafxc7qu2xfoujqm.streamlit.app/
 ---
 
 ## 📌 Project Overview
